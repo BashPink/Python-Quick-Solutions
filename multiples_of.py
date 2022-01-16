@@ -1,5 +1,5 @@
 #Proposed Question...
-#Find the sum of all the multiples of 3 or 5 below 1000.
+#Find the sum of all the multiples of X and Y below the number Z.
 #This script is designed to take user input for a variety of answers.
 
 
