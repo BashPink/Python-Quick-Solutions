@@ -1,0 +1,46 @@
+"""
+I developed this quick algorythm to sort out a really
+ tedious process my son uses for his "Guess and Check" math 
+homework.
+"""
+
+from time import sleep
+
+# The total of whatever is to be calculated
+total = int(input("Enter Total..."))
+
+# The differance of the two numbers
+dif_needed = int(input("Enter Difference..."))
+
+# Global Variables
+"""
+The problem is to find the differance between two amounts 
+with a set total.
+i.e. Brian has 4 more red apples than green apples.
+There are 12 apples in all. How many Green apples are there?
+You would pick the lesser number on the table once calculated 
+since we know there are more red apples.
+"""
+row_1 = 1
+row_2 = total - 1
+count = 0
+dif = 0
+
+# Fancy Total layout
+print(" ")
+print(f"##### {total} #####")
+print("________________")
+
+# Pull inputs and insert in chart.
+# Cycle through integers on the table until the differance is met, 
+#adding one to the first row and subtracting one from the total each cycle.
+while dif != dif_needed:
+    dif = row_2 - row_1
+    print(f"  {row_1}   |   {row_2}   ")
+    row_1 += 1
+    row_2 -= 1
+    sleep(.3)
+
+if dif == dif_needed:
+        print(" ")
+        print(f"The bottom two factors of the table are your two numbers with a differance of {dif_needed} that equal {total}! ")
